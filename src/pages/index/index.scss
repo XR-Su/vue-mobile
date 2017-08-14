@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+#app {
+  display: flex;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+}
+
+#app_content {
+  flex: 12;
+}
+
+#app_bottom {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #324057;
+
+  .tab {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  .tab:before {
+      font-size: 1.6em;
+  }
+}
