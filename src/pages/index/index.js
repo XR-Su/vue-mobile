@@ -11,7 +11,7 @@ import store from '../store'
 
 import homeA from '../components/HomeA';
 import homeB from '../components/HomeB';
-
+import homeApage1 from '../components/HomeApage1';
 
 Vue.use(VueRouter)
 Vue.use(VueResource)
@@ -23,9 +23,13 @@ const router = new VueRouter({
       path: '/',
       redirect: '/homeA'
     },
-    {
+    { 
       path: '/homeA', 
       component: homeA,
+    },
+    {
+      path: '/homeA/page1', //注：这里不能使用children，如果这里使用children的话，那么children中的路由是能在<router-view>中的<router-view>中显示
+      component: homeApage1
     },
     {
       path: '/homeB', 

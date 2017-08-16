@@ -1,7 +1,9 @@
 <template>
 <div id="homeB">
   <div id="header">
-    <span>homeB</span>
+    <div class="left"></div>
+    <div class="center"><span>homeB</span></div>
+    <div class="right"></div>
   </div>
   <div id="content">
     bbb
@@ -22,6 +24,10 @@
     align-items: center;
     flex: 1;
     background-color: #20a0ff;
+  }
+
+  #homeB #header span {
+    color: white;
   }
 
   #homeB #content {
