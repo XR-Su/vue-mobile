@@ -1,20 +1,29 @@
 <template>
   <div id="homeA_page1">
-    <div id="header">
-      <div id="header_content" class="mountAnim">
-          <div class="left" @click="returnPrePage"><i class="el-icon-arrow-left"></i></div>
-          <div class="center"><span>homeA_page1</span></div>
-          <div class="right"></div>
-      </div>
-    </div>
-    <div id="content" class="mountAnim">
-      homeAChilren
+    <div id="homeA_page1_wrapper">
+        <div id="header">
+          <div id="header_content" class="mountAnim">
+              <div class="left" @click="returnPrePage"><i class="el-icon-arrow-left"></i></div>
+              <div class="center"><span>homeA_page1</span></div>
+              <div class="right"></div>
+          </div>
+        </div>
+        <div id="content" class="mountAnim">
+          homeAChilren
+        </div>
     </div>
   </div>
 </template>
 <style>
   #homeA_page1 {
     display: flex;
+    height: 100%;
+    width: 100%;
+  }
+
+  #homeA_page1_wrapper {
+    display: flex;
+    position: absolute;
     height: 100%;
     width: 100%;
     flex-direction: column;
@@ -58,10 +67,10 @@
     methods: {
       returnPrePage: function () {
         let els = document.getElementsByClassName('mountAnim');
-        Velocity(els, {opacity: [0, 1], translateX: [75, 0], translateZ: 0},{easing:"easeInQuad" ,duration: 800});
+        Velocity(els, {opacity: [0, 1], translateX: [75, 0], translateZ: 0},{easing:"easeOutQuart" ,duration: 800});
         setTimeout(() => {
           this.$router.back();
-        },1000);
+        },800);
       }
     }
   }

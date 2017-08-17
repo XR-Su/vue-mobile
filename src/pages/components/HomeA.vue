@@ -1,20 +1,29 @@
 <template>
 <div id="homeA">
-  <div id="header">
-    <div id="header_content" class="mountAnim">
-        <div class="left"></div>
-        <div class="center"><span>homeA</span></div>
-        <div class="right"></div>
-    </div>
+  <div id="homeA_wrapper">
+       <div id="header">
+          <div id="header_content" class="mountAnim">
+              <div class="left"></div>
+              <div class="center"><span>homeA</span></div>
+              <div class="right"></div>
+          </div>
+        </div>
+        <div id="content" class="mountAnim">
+          <button @click="go">go</button>
+        </div> 
   </div>
-  <div id="content" class="mountAnim">
-    <button @click="go">go</button>
-  </div> 
 </div>
 </template>
 <style>
   #homeA {
     display: flex;
+    height: 100%;
+    width: 100%;
+  }
+
+  #homeA_wrapper {
+    display: flex;
+    position: absolute;
     height: 100%;
     width: 100%;
     flex-direction: column;
@@ -58,7 +67,7 @@
     },
     mounted: function () {
       let els = document.getElementsByClassName('mountAnim');
-      Velocity(els, {opacity: [1, 0], translateX: [0, -75], translateZ: 0},{easing:"easeOutQuart" ,duration: 800});
+      Velocity(els, {opacity: [1, 0], translateX: [0, -75], translateZ: 0},{easing:"easeOutQuart" ,duration: 500});
     },
     beforeDestroy: function () {
 

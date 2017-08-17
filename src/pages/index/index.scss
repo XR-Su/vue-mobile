@@ -27,11 +27,21 @@ i {
 #app_bottom {
   display: flex;
   flex: 1;
-  flex-direction: row;
-  justify-content: space-around;
+  // flex-direction: row;
+  // justify-content: space-around;
   background-color: #324057;
+  position: relative;
 
-  .tab {
+  #app_bottom_wrapper {
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  a {
     display: flex;
     align-items: center;
     height: 100%;
