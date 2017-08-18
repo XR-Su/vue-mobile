@@ -9,7 +9,7 @@
           </div>
         </div>
         <div id="content" class="mountAnim">
-          <button @click="go">go</button>
+          <button @click="go">点击！</button>
         </div> 
   </div>
 </div>
@@ -19,6 +19,7 @@
     display: flex;
     height: 100%;
     width: 100%;
+    position: relative;
   }
 
   #homeA_wrapper {
@@ -67,10 +68,7 @@
     },
     mounted: function () {
       let els = document.getElementsByClassName('mountAnim');
-      Velocity(els, {opacity: [1, 0], translateX: [0, -75], translateZ: 0},{easing:"easeOutQuart" ,duration: 500});
-    },
-    beforeDestroy: function () {
-
+      Velocity(els, {opacity: [1, 0], translateX: [0, -75], translateZ: 0},{easing:"easeOutQuad" ,duration: 400});
     },
     methods: {
       go: function () {

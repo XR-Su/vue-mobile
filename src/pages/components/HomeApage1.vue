@@ -9,7 +9,14 @@
           </div>
         </div>
         <div id="content" class="mountAnim">
-          homeAChilren
+          <div class="row">
+            <div class="img"></div>
+            <div class="img"></div>
+          </div>
+          <div class="row">
+            <div class="img"></div>
+            <div class="img"></div>
+          </div>
         </div>
     </div>
   </div>
@@ -19,6 +26,7 @@
     display: flex;
     height: 100%;
     width: 100%;
+    position: relative;
   }
 
   #homeA_page1_wrapper {
@@ -50,6 +58,22 @@
 
   #homeA_page1 #content {
     flex: 12;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  #homeA_page1 #content .row{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .img {
+    width: 150px;
+    height: 150px;
+    background-image: url("../../../resource/whl1.png");
+    background-size:cover;
+    opacity: 0;
   }
 </style>
 <script>
@@ -63,6 +87,10 @@
       //let main = document.getElementById('homeA_page1');
       let els = document.getElementsByClassName('mountAnim');
       Velocity(els, {opacity: [1, 0], translateX: [0, 75], translateZ: 0},{easing:"easeOutQuart" ,duration: 800});
+      setTimeout(()=>{
+        els = document.getElementsByClassName('img');
+        Velocity(els, "transition.bounceIn", {stagger: '100ms'});
+      },500);
     },
     methods: {
       returnPrePage: function () {
@@ -70,7 +98,7 @@
         Velocity(els, {opacity: [0, 1], translateX: [75, 0], translateZ: 0},{easing:"easeOutQuart" ,duration: 800});
         setTimeout(() => {
           this.$router.back();
-        },800);
+        },100);
       }
     }
   }

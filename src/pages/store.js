@@ -5,8 +5,13 @@ Vue.use(Vuex)
 
 const moduleA = {
   state: {
-    headerText: '首页',
     count: 0,
+    userRouter: {
+      homeA: {pre:'', next:''},
+      homeB: {},
+      homeC: {},
+      homeD: {}
+    }
   },
   mutations: {
     increment (state) {
