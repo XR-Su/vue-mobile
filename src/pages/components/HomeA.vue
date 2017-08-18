@@ -1,17 +1,15 @@
 <template>
 <div id="homeA">
-  <div id="homeA_wrapper">
-       <div id="header">
-          <div id="header_content" class="mountAnim">
-              <div class="left"></div>
-              <div class="center"><span>homeA</span></div>
-              <div class="right"></div>
-          </div>
-        </div>
-        <div id="content" class="mountAnim">
-          <button @click="go">点击！</button>
-        </div> 
-  </div>
+    <div id="header">
+      <div id="header_content" class="mountAnim">
+          <div class="left"></div>
+          <div class="center"><span>homeA</span></div>
+          <div class="right"></div>
+      </div>
+    </div>
+    <div id="content" class="mountAnim">
+      <button @click="go">点击！</button>
+    </div> 
 </div>
 </template>
 <style>
@@ -19,14 +17,7 @@
     display: flex;
     height: 100%;
     width: 100%;
-    position: relative;
-  }
-
-  #homeA_wrapper {
-    display: flex;
-    position: absolute;
-    height: 100%;
-    width: 100%;
+    /* position: absolute; */
     flex-direction: column;
   }
 

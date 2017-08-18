@@ -22,19 +22,18 @@ i {
 
 #app_content {
   flex: 12;
+  position: relative;
 }
 
 #app_bottom {
   flex: 1;
   display: flex;
-  // flex-direction: row;
-  // justify-content: space-around;
   background-color: #324057;
   position: relative;
 
   #app_bottom_wrapper {
     display: flex;
-    position: absolute;
+    // position: absolute;
     height: 100%;
     width: 100%;
     flex-direction: row;

@@ -1,37 +1,28 @@
 <template>
   <div id="homeA_page1">
-    <div id="homeA_page1_wrapper">
-        <div id="header">
-          <div id="header_content" class="mountAnim">
-              <div class="left" @click="returnPrePage"><i class="el-icon-arrow-left"></i></div>
-              <div class="center"><span>homeA_page1</span></div>
-              <div class="right"></div>
-          </div>
+      <div id="header">
+        <div id="header_content" class="mountAnim">
+            <div class="left" @click="returnPrePage"><i class="el-icon-arrow-left"></i></div>
+            <div class="center"><span>homeA_page1</span></div>
+            <div class="right"></div>
         </div>
-        <div id="content" class="mountAnim">
-          <div class="row">
-            <div class="img"></div>
-            <div class="img"></div>
-          </div>
-          <div class="row">
-            <div class="img"></div>
-            <div class="img"></div>
-          </div>
+      </div>
+      <div id="content" class="mountAnim">
+        <div class="row">
+          <div class="img"></div>
+          <div class="img"></div>
         </div>
-    </div>
+        <div class="row">
+          <div class="img"></div>
+          <div class="img"></div>
+        </div>
+      </div>
   </div>
 </template>
 <style>
   #homeA_page1 {
     display: flex;
-    height: 100%;
-    width: 100%;
-    position: relative;
-  }
-
-  #homeA_page1_wrapper {
-    display: flex;
-    position: absolute;
+    /* position: absolute; */
     height: 100%;
     width: 100%;
     flex-direction: column;
